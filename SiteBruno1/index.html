@@ -12,9 +12,46 @@
 </head>
 <body>
 
+<div class="flex fixed bg-red-300 h-20 w-full md:pl-64 md:pr-16 items-center">
+    <div> <!--INÍCIO LOGO-->
+        <a href="#">
+            <img src="src/img/bank.png" class="w-16">
+        </a>
+    </div> <!--FIM LOGO-->
+
+    <div class="flex justify-end flex-1 text-blue-900 font-bold text-lg"> <!--INÍCIO MENU-->
+        <ul class="flex items-center">
+            <li class="px-7 py-5 text-center border-b-8 border-red-900">
+                <p>What We offer<i class="fas fa-chevron-down ml-2"></i></p>
+
+            </li>
+            <li class="px-7 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900">
+                <p>Resources<i class="fas fa-chevron-down ml-2"></i></p>
+            </li>
+            <li class="px-7 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900">
+                <p>About Us<i class="fas fa-chevron-down ml-2"></i></p>
+            </li>
+            <li class="px-7 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900">
+                <p>Help</p>
+            </li>
+            <li>
+                <span class="pl-2"></span>
+            </li>
+            <li class="text-center border-b-8 px-7 py-7 border-transparent">
+                <button class="hover:shadow-md text-blue-900 py-2 px-4 border border-blue-900 font-semibold">
+                    Sign In
+                </button>
+            </li>
+        </ul>
+
+    </div> <!--FIM MENU-->
+
+
+</div>
+
 <header>
 
-    <nav class="flex justify-around items-center bg-pink-300 bg-opacity-75">
+    <nav class="flex justify-around items-center bg-pink-300 bg-opacity-75 pt-20">
 
         <div class="h-20 w-20 m-2"> <!--INICIO LOGO-->
             <img src="src/img/bank.png">
@@ -22,7 +59,7 @@
 
         <div>
             <div id="menu-btn-1" class="bg-purple-300 hover:bg-purple-500 border-2 border-purple-600 w-48 text-center m-2 pt-2 pb-2 tracking-widest text-white rounded font-bold">What We Offer<i class="fas fa-chevron-down ml-2"></i></div>
-            <div id="dropdown-1" class="flex mb-6 absolute bg-gray-200 rounded w-1/2 ">
+            <div id="dropdown-1" class="flex mb-6 absolute bg-gray-200 rounded w-1/2 hidden">
                 <div  class="flex flex-col  text-sm  w-1/3 border-r border-black py-2">
                     <p class="font-bold uppercase ml-8 py-1">Borrowing</p>
                     <a href="#" class="hover:text-pink-900  py-1 ml-8">Personal Loans</a>
@@ -89,7 +126,7 @@
 
 <main>
 
-    <div>
+    <div class="flex">
         <div class="h-96 w-screen bg-no-repeat bg-cover px-32 py-16 text-white" style="background-image: url('src/img/girl-3.jpg');">
             <p class="font-bold uppercase">Personal Loans</p>
             <p class="font-bold text-4xl">Get Up To $40,000 and</p>
