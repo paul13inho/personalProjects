@@ -18,57 +18,75 @@
 
 <header>
 
-    <div class="flex fixed bg-red-300 h-20 w-full md:pl-64 md:pr-16 items-center">
-        <div> <!--INÍCIO LOGO-->
+    <!--INÍCIO MENU DESKTOP-->
+    <div class="flex absolute bg-red-300 h-16 md:h-20 w-full pl-8 md:pl-32 items-center">
+
+        <div class=""> <!--INÍCIO LOGO-->
             <a href="#">
-                <img src="src/img/bank.png" class="w-16">
+                <img src="src/img/bank.png" class="w-10 md:w-16">
             </a>
         </div> <!--FIM LOGO-->
 
-        <div class="flex justify-end flex-1 text-blue-900 font-bold"> <!--INÍCIO MENU-->
+        <div id="menu" class="flex justify-end flex-1 md:hidden text-white text-3xl mr-8"> <!--INÍCIO HAMBURGUER MOBILE-->
+            <i class="fas fa-bars"></i>
+        </div> <!--FIM HAMBURGUER MOBILE-->
+
+        <div  class="justify-end flex-1 text-blue-900 font-bold hidden md:flex"> <!--INÍCIO MENU NAV-->
             <ul class="flex items-center">
 
-                <!--MENU DROPDOWN WHAT WE OFFER-->
-                <li id="menu-btn-1x"class="px-3 py-5 text-center border-b-8 border-red-900">
+                <li class="px-3 py-5 text-center border-b-8 border-red-900">
                     <p>What We offer</p>
                 </li>
 
-                <!--MENU DROPDOWN RESOURCES-->
-                <li id="menu-btn-2x" class="px-3 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900 relative">
+                <li class="px-3 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900 relative">
                     <p>Resources</p>
                 </li>
 
-                <!--MENU DROPDOWN ABOUT US-->
-                <li id="menu-btn-3x" class="px-3 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900 relative">
+                <li class="px-3 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900 relative">
                     <p>About Us</p>
                 </li>
 
-                <!--MENU HELP-->
-                <li class="px-3 py-5 text-center border-b-8 border-transparent">
-                    <p>Help</p>
+                <li class="px-3 py-5 text-center border-b-8 border-transparent hover:border-b-8 hover:border-red-900 relative">
+                <p>Help</p>
                 </li>
 
                 <li>
                     <span class="pl-2"></span>
                 </li>
 
-                <!--BOTÃO SIGN IN-->
                 <li class="text-center border-b-8 px-3 py-7 border-transparent">
                     <button class="hover:shadow-md text-blue-900 py-2 px-4 border border-blue-900 font-semibold">
                         Sign In
                     </button>
                 </li>
-
             </ul>
-
-        </div> <!--FIM MENU-->
+        </div> <!--FIM MENU NAV-->
     </div>
+    <!--FIM MENU DESKTOP-->
+
+
+
+    <!--INÍCIO MENU MOBILE-->
+    <div id="dropdown" class="flex h-screen w-full pt-16 bg-pink-100 pl-8 pr-8 hidden">
+        <div class="flex w-full text-2xl font-semibold">
+            <ul class="w-full">
+                <li class="py-5 border-b border-purple-400">
+                    <p>What We offer</p>
+                </li>
+                <li class="py-5 border-b border-purple-400">
+                    <p>Resources</p>
+                </li>
+                <li class="py-5 border-b border-purple-400">
+                    <p>About Us</p>
+                </li>
+                <li class="py-5 border-b border-purple-400">
+                <p>Help</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--FIM MENU MOBILE-->
 </header>
-
-
-
-<!--DIV PRA DAR ESPAÇAMENTO DO MENU FIXO-->
-div class="flex bg-red-300 h-20 w-full></div>
 
 
 
@@ -591,5 +609,21 @@ div class="flex bg-red-300 h-20 w-full></div>
         <p class="pb-4">© 2022 LendingClub Bank. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('#menu')
+        const dropdown = document.querySelector('#dropdown')
+
+        menuBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('hidden')
+            dropdown.classList.toggle('flex')
+        })
+    })
+</script>
+
+
+
+
 </body>
 </html>
